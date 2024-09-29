@@ -7,8 +7,10 @@ print("**********")
 guess = 25
 total_intentos = 3
 intento = 1
-while (total_intentos > intento | guess == valor_int):
-    print("Intento ", intento, "de 3")
+valor_int = 0
+while (intento <= total_intentos and guess != valor_int):
+    #print("Intento {} de {}".format(intento, total_intentos))
+    print(f"Intento {intento} de {total_intentos}")
     valor_str = input("introduce un numero: ")  #sera un valor str
     valor_int = int(valor_str)
     print("Tu numero fue: ", valor_int)
@@ -29,7 +31,8 @@ while (total_intentos > intento | guess == valor_int):
     #intento = intento + 1
     intento +=1
 print("El juego a concluido")
-print(type(valor_int), type(valor_str))
+
+
 
 
 

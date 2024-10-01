@@ -8,7 +8,8 @@ guess = 25
 total_intentos = 3
 intento = 1
 valor_int = 0
-while (intento <= total_intentos and guess != valor_int):
+
+for intento in range(1,4):
     #print("Intento {} de {}".format(intento, total_intentos))
     print(f"Intento {intento} de {total_intentos}")
     valor_str = input("introduce un numero: ")  #sera un valor str
@@ -28,8 +29,7 @@ while (intento <= total_intentos and guess != valor_int):
         elif(menor):
             print("El numero es menor")
         print("Intentalo de nuevo")
-    #intento = intento + 1
-    intento +=1
+
 print("El juego a concluido")
 
 

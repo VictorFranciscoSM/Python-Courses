@@ -4,8 +4,9 @@ print("**********")
 print("Adivina el numero")
 print("**********")
 
-guess = round(random.random() * 100)    #primero nos da unnuemro del 0 al 1 y despues la redondea
-print(guess)
+#guess = round(random.random() * 100)    #primero nos da unnuemro del 0 al 1 y despues la redondea
+guess = random.randint(1,100)
+print("El nuemro secreto es: ", guess)
 
 total_intentos = 3
 intento = 1

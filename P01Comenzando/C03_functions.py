@@ -1,3 +1,5 @@
+import random
+###########################################################
 #Function range ciclo de lazo con for
 
 for numero in range(5):
@@ -8,6 +10,8 @@ for numero in range(1,6):
 
 for numero in range(1,10,2):
     print(numero)
+#############################################################
+#funtion Format
 
 print("Intento {} de {}".format(1,3))
 print("Intento {1} de {0}".format(1,3))             #Para decidir en que espacio ira cada varible se hara por su posicion dentro de .format
@@ -25,6 +29,11 @@ print("El numero {:7d}".format(46))         #Muestra 7 espacios, 5 en blanco y l
 print("El numero {:07d}".format(46))         #Muestra 7 espacios, 5 en 0 y los dos numeros
 print("Fecha:{:2d}/{:2d}".format(5,5))
 print("Fecha:{:02d}/{:02d}/20{:2d}".format(5,5,24))        
+
+#########################################
+#Function random, se importa al incio del progrma
+#Devuelve numeros aleatorios en el rango de 0 a 1
+print(random.random())
 
 
 

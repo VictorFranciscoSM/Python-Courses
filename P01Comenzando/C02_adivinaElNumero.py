@@ -1,10 +1,12 @@
+import random
 
 print("**********")
 print("Adivina el numero")
 print("**********")
 
-#la funcion input("str") muestra un string en la terminal y se almacena lo introducido en la asocioado
-guess = 25
+guess = round(random.random() * 100)    #primero nos da unnuemro del 0 al 1 y despues la redondea
+print(guess)
+
 total_intentos = 3
 intento = 1
 valor_int = 0

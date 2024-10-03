@@ -5,6 +5,7 @@ def jugar():
     print("Biemvemido al juego el Ahorcado")
 
     secretWord = "banana" 
+    secretWord = secretWord.strip()               #Elimana todos los espacios dentro del string
     ahorco = False
     acerto = False
     tamano = len(secretWord)
@@ -15,9 +16,13 @@ def jugar():
     while (not ahorco and not acerto) and i < tamano:
         while longitud > 1:
             intento = input("Digita una letra: ")
+            intento = intento.strip()               #Elimina todos los espacios dentro del string
+            #intento = intento.lower()               #Covierte todos los caracteres a minusculas
+            intento = intento.upper()               #Covierte todos los caracteres a mayusculas
             longitud = len(intento)
             if(longitud != 1):
                 print("Ingresa solo una letra")
+
         indice = 0
         for letra in secretWord:
             print(letra)

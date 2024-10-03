@@ -1,18 +1,32 @@
 import random
 
-print("**********")
-print("Adivina el numero")
-print("**********")
+intento = 1
+valor_int = 0
+
+print("***********************************")
+print("*********Adivina el numero*********")
+print("***********************************")
+print("Elige el nivel de dificultad")
+print("(1)Novato (2)Intermedio (3)Avanzado")
+
+dificultad = 0
+while(dificultad > 3 or dificultad < 1):
+ dificultad = int(input("Introduce la difultad "))
+ if(dificultad > 3 or dificultad < 1) == True:
+     print("Ingresa una dificultad valida")
+
+if dificultad == 1:
+    total_intentos = 20
+elif dificultad == 2:
+    total_intentos = 10
+else:
+    total_intentos = 5
 
 #guess = round(random.random() * 100)    #primero nos da unnuemro del 0 al 1 y despues la redondea
 guess = random.randint(1,100)
 print("El nuemro secreto es: ", guess)
 
-total_intentos = 3
-intento = 1
-valor_int = 0
-
-for intento in range(1,4):
+for intento in range(1,total_intentos + 1):                       #range genera un rangp de numeros secuenciales
     #print("Intento {} de {}".format(intento, total_intentos))
     print(f"Intento {intento} de {total_intentos}")
     valor_str = input("introduce un numero: ")  #sera un valor str

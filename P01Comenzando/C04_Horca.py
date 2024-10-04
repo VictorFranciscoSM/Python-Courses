@@ -14,6 +14,7 @@ def jugar():
 
     i=0
     while (not ahorco and not acerto) and i < tamano:
+        print(f"Intento {i+1} te quedan {tamano-i}: ")
         longitud = 2
         while longitud > 1:
             intento = input("\nDigita una letra: ")
@@ -33,8 +34,12 @@ def jugar():
             indice +=1
         print(lista_vacia)
         i += 1  
+        letras_faltantes = str(lista_vacia.count('_'))
         if("_" not in lista_vacia):
             i = len(secretWord)
+        else:
+            print("Faltantan acertar {} letras" .format(letras_faltantes))
+
     if("_" in lista_vacia):
         print("Perdiste")
     else:

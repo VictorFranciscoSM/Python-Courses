@@ -21,10 +21,8 @@ print(lista[1][1])                      #pedemos acceder a los valores de la tup
 
 print(instructores[1][0])
 
-mi_nombre = "Luri"
-mi_nombre = "LuriBot"
-print(mi_nombre)
-
-mi_nombre = "Luri"
-mi_nombre = mi_nombre + "Bot"
-print(mi_nombre)
+print(type(instructor1))
+instructor1= list(instructor1)          #se convierte una tupla a una lista
+print(type(instructor1))
+instructores = tuple(instructores)      #Convierte la lista a tupla
+print(type(instructores))               

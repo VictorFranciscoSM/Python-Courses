@@ -9,7 +9,8 @@ def jugar():
     ahorco = False
     acerto = False
     tamano = len(secretWord)
-    lista_vacia = ["_"]*tamano                   #Multiplica la lista ["_"] por un cierto valor y regresa la lista con ese valor en los elemntos
+    #lista_vacia = ["_"]*tamano                   #Multiplica la lista ["_"] por un cierto valor y regresa la lista con ese valor en los elemntos
+    lista_vacia = ["_" for letra in secretWord]
     print(lista_vacia,"\n")
 
     errores=0

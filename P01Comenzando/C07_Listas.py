@@ -44,3 +44,17 @@ print(lista)
 lista1 = ['_' for letra in frutas]      #se pueden crear una lista con otra lista por medio del for in
 print(lista1)
 
+enteros = [1,3,4,5,7,8]
+cuadrado = [n*n for n in enteros]
+print(cuadrado)
+
+enteros = [1,3,4,5,7,8,9]
+pares = []
+for numero in enteros:
+    if numero % 2 == 0:
+        pares.append(numero)
+print(pares)
+
+pares.clear()
+pares = [x for x in enteros if x % 2 == 0]
+print(pares)

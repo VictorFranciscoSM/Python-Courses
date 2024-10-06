@@ -1,10 +1,22 @@
+import random
 def jugar():
     print("***********************************")
     print("************El Ahorcado************")
     print("***********************************")
     print("Bienvenido al juego del Ahorcado adivina la siguiente palabra\n")
 
-    secretWord = "banana".upper()
+    #archivo = open("C:/Users/VictorFSM/Desktop/Cursos One/Python-Courses/P01Comenzando/palabra.txt", 'r')   #Las comillas dobles (" ") son necesarias para indicar a Python que la ruta completa es un 
+                                                        #solo string, incluso si contiene espacios.
+                                                        #Si no se usan las comillas dobles, Python interpretará cada espacio como el final de un string,
+                                                        # lo que genera un error.
+
+    #palabras = [linea.strip() for linea in archivo]     #crea una lista tomando como valor cada linea, con el strip evitamos el caracter \n
+    #archivo.close()
+    with open("C:/Users/VictorFSM/Desktop/Cursos One/Python-Courses/P01Comenzando/palabra.txt", 'r') as archivo:
+        palabras = [linea.strip() for linea in archivo]     #crea una lista tomando como valor cada linea, con el strip evitamos el caracter \n
+
+    i = random.randrange(0,len(palabras))
+    secretWord = palabras[i].upper()
     secretWord = secretWord.strip()               #Elimana todos los espacios dentro del string
     ahorco = False
     acerto = False

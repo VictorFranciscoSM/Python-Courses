@@ -15,18 +15,24 @@
 #archivo.write('manzana\n')
 #archivo.close() 
 
-archivo = open('palabra.txt', 'r')
+archivo = open('P01Comenzando\palabra.txt', 'r')
 #print(archivo.read())               #si se usa la terminal con arhivo.read() mostraria todo junto y mostrando los \n
-linea = archivo.readline()          #extrar la primara linea del arhivo, por lo que se extrae 'uva\n'
+#linea = archivo.readline()          #extrar la primara linea del arhivo, por lo que se extrae 'uva\n'
 #print(linea)
 
-for linea in archivo:
+for linea in archivo:               #toma liena por linea hasta que llegue al final ej. "uva\n"
     print(linea)
 
-print(linea.strip())
+print(linea.strip())                #como tambien toma el salto de linea tenemos que poner strip apra quitarselo
 
 archivo.close() 
 
+#Con with, Python se encarga de cerrar el archivo automáticamente, incluso si ocurre un error
+with open("palabra.txt") as archivo:    #Esto significa que estamos abriendo el archivo "palabras.txt" y asignándolo a la variable archivo
+  for linea in archivo:
+    print(linea)
+
+#with open("palabras.txt", 'w') as archivo:
 '''
 open(nombre_archivo, modo): Esta función es la base para trabajar con archivos.
 
@@ -62,6 +68,8 @@ tell(): Devuelve la posición actual del puntero de lectura o escritura.
 
 truncate(tamaño): Trunca el archivo a un tamaño específico.
 
+import os
+
 os.remove(nombre_archivo): Elimina un archivo.
 
 os.rename(nombre_archivo_original, nuevo_nombre_archivo): Renombra un archivo.
@@ -77,4 +85,17 @@ os.path.getsize(nombre_archivo): Devuelve el tamaño del archivo en bytes.
 os.path.abspath(nombre_archivo): Devuelve la ruta absoluta del archivo.
 
 os.path.join(ruta, nombre_archivo): Une una ruta y un nombre de archivo para crear una ruta completa.
+
+# Solicita al usuario que ingrese la ruta del archivo
+path = input("Ingresa la ruta del archivo: ")
+
+# Verifica si la ruta es válida
+if os.path.exists(path):
+    # Abre el archivo
+    archivo = open(path, "r")
+    # Procesa el archivo
+    # ...
+    archivo.close()
+else:
+    print("La ruta ingresada no es válida.")
 '''

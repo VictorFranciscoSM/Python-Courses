@@ -22,7 +22,7 @@ class Cuenta:
 #self es la instacia, la referencia. por eso es para referirse a la clase Cuenta
 
 cuenta1 = Cuenta(123,'Victor',2000.0,'Nu',10000.0)
-cuenta1 = Cuenta(427,'Arturo',1200.0,'Nu',62000.0)
+cuenta2 = Cuenta(427,'Arturo',1200.0,'Nu',62000.0)
 
 ##Para llamar un metodo, es el Objeto.NombreDelMetodo(atributos)
 cuenta1.deposita(100)

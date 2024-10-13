@@ -17,17 +17,19 @@ class Cuenta:
     def extracto(self):
         print(f'El saldo de la cuenta de {self.__titular} es: {self.__saldo}')
 
+    def transfiere(self, valor, destino):
+        self.retira(valor)                  #se le aplica un metodo a la misma instacia
+        destino.deposita(valor)
+
 cuenta1 = Cuenta(123,'Victor',2000.0,'Nu',10000.0)
-#cuenta1._Cuenta__saldo = 20             #para acceder a variables privadas
-
-valor = 100
-cuenta1.extracto()
-cuenta1.retira(valor)
-cuenta1.extracto()
 cuenta2 = Cuenta(427,'Arturo',1200.0,'Nu',62000.0)
+
+cuenta1.transfiere(100.0,cuenta2)
+cuenta1.extracto()
 cuenta2.extracto()
-cuenta2.deposita(valor)
-cuenta2.extracto()
 
+#El encapsulamiento consiste en organizar nuestro código de forma eficiente, 
+#agrupando funcionalidades relacionadas dentro de una clase
 
-
+#La cohesión se refiere a la relación entre los elementos de una clase. 
+# Es importante que los elementos de una clase estén relacionados entre sí y que tengan un propósito común.

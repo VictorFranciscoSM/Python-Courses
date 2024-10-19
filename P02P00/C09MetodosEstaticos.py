@@ -13,7 +13,7 @@ class Cuenta:
     def deposita(self, valor):
         self.__saldo += valor
 
-    def __puede_retirar(self, valor_a_retirar):
+    def __puede_retirar(self, valor_a_retirar):                 #metodo privado ya que solo se usa dentro de la clase
         valor_disponible = self.__saldo + self.__limite
         return valor_a_retirar <= valor_disponible        
 
@@ -39,7 +39,7 @@ class Cuenta:
     def limite(self):
         return self.__limite
     
-    @staticmethod
+    @staticmethod               #metodo estatico, no se necesita instanciar la clase
     def codigo_banco():
         return '1001'
     
@@ -50,3 +50,20 @@ class Cuenta:
     @limite.setter
     def limite(self, limite):
         self.__limite = limite
+
+#cuenta1 = Cuenta(123,'Victor',100.0,'Nu',1000.0)
+#cuenta2 = Cuenta(427,'Arturo',1200.0,'Nu', 6200.0)
+
+#cuenta1.retira(1001.0)
+#cuenta1.extracto()
+#print(cuenta1.saldo)
+#print(cuenta1.codigo_banco)
+print(Cuenta.codigo_banco())            #El metodo estatico no necesita ser instacia por una cuenta, se llama desde la clase
+codigos = Cuenta.codigos_bancos()
+print(codigos['Santander'])
+
+'''
+Estos métodos son especiales porque no necesitan una instancia 
+de la clase para funcionar. Se pueden llamar directamente desde 
+la clase, sin necesidad de crear un objeto.
+'''
